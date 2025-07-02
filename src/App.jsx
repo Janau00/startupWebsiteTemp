@@ -1,13 +1,19 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import monshaatLogo from './assets/monshaatPic2.png'
 import './App.css'
+import { Features } from './data.js'
+import Header from './components/Header.jsx'
+import Feature from './components/Feature.jsx'
+import TabButton from './components/TabButton.jsx'
+import Hero from './components/Hero.jsx'
+import About from './components/About.jsx'
+import Services from './components/Services.jsx'
+import Footer from './components/Footer.jsx'
+import ContactUs from './components/ContactUs.jsx'
 
-function Header(){
-  return(
-    <header><h1>react test</h1></header>
-  )
-}
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -15,25 +21,47 @@ function App() {
     <>
       <div>
         <Header />
+        <Hero />
+        <About />
+        <section className="features-section">
+          <div className="features-container">
+            <Feature {...Features[0]} />
+            <Feature {...Features[1]} />
+          </div>
+        </section>
+        <Services />
+        <ContactUs/>
+        <Footer />
+
+
+
+        {/* <Feature {...Features[1]}/> */}
+        {/* title="Startup title"
+        description="this is a description"
+        image= {monshaatLogo} */}
+
+
+        {/* <Feature /> */}
+        {/* <TabButton>Start Free Trail</TabButton>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        </a> */}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
+      {/* <h1>Vite + React</h1> */}
+      {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
-      </div>
-      <p className="read-the-docs">
+      </div> */}
+      {/* <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </>
   )
 }
