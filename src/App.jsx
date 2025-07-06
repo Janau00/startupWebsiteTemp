@@ -12,7 +12,7 @@ import About from './components/About.jsx'
 import Services from './components/Services.jsx'
 import Footer from './components/Footer.jsx'
 import ContactUs from './components/ContactUs.jsx'
-
+// import heroPic from './assets/Online world-rafiki.png'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,15 +20,20 @@ function App() {
   return (
     <>
       <div>
-        <Header />
+        <Header /><br/>
+        <Hero />
+        <Hero />
         <Hero />
         <About />
         <section className="features-section">
-          <div className="features-container">
-            <Feature {...Features[0]} />
-            <Feature {...Features[1]} />
-          </div>
-        </section>
+  <h2 className="section-title">FEATURES</h2>
+  <div className="features-container">
+    {Features.map((feature, index) => (
+      <Feature key={index} {...feature} />
+    ))}
+  </div>
+</section>
+
         <Services />
         <ContactUs/>
         <Footer />
