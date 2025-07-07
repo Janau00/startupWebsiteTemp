@@ -21,9 +21,11 @@ function App() {
     <>
       <div>
         <Header /><br/>
+        
+     <div style={{ height: '1650px' }} /> {/* Spacer */}
+
         <Hero />
-        <Hero />
-        <Hero />
+       
         <About />
         <section className="features-section">
   <h2 className="section-title">FEATURES</h2>
